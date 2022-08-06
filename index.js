@@ -99,6 +99,6 @@ app.put('/api/persons/:id', (req, res) => {
 })
 
 const PORT = 3002
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
