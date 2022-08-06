@@ -1,0 +1,15 @@
+POST http://localhost:3002/api/persons
+content-type: application/json
+
+{
+    "name": "else"
+}
+
+###
+
+POST http://localhost:3002/api/persons
+content-type: application/json
+
+{
+    "number": "416"
+}
