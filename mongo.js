@@ -30,12 +30,14 @@ const personSchema = new mongoose.Schema({
 const Person = mongoose.model('Person', personSchema)
 
 if (phonebookDisplay) {
-    console.log('Phonebook \n')
-    Person
-    .find({})
-    .then(persons => {
+    console.log('Phonebook:')
+    mongoose
+        .connect(url)
+        Person
+        .find({})
+        .then(persons => {
         persons.forEach(person => {
-            console.log(`${person.name} ${person.number}\n`)
+            console.log(`${person.name} ${person.number}`)
         })
         mongoose.connection.close()
     })
